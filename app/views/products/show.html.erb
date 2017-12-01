@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+
+  <div class="col col-lg-2 col-mid-4 col-sm-4">
+ 
+<!--  Feature or not -->
+
+    <% if @product.feature_image == true %>
+
+      <strong class="products-label">Featured on Home Screen</strong>
+
+    <% end %>
+
+    <hr>
+<!-- Basic Information -->
+
+    <p>
+      <strong class="products-label">Name:</strong>
+      <%= @product.name%>
+    </p>
+
+    <p>
+      <strong class="products-label">Image Type:</strong>
+      <%= @picture.shape %>
+    </p>
+
+    <p>
+      <strong class="products-label">Category:</strong>
+      <%= @product.category.name %>
+    </p>
+
+    <p>
+      <strong class="products-label">Medium:</strong>
+      <%= @product.medium %>
+    </p>
+
+    <p>
+      <strong class="products-label">Year:</strong>
+      <%= @product.year %>
+    </p>
+
+     <p>
+      <strong class="products-label">Size:</strong>
+      <%= @product.size %>
+    </p>
+
+<!-- For Sale  -->
+    <hr>
+    <p>
+      <strong class="products-label">For Sale:</strong>
+      <%=  @product.for_sale %>
+    </p>    
+
+     <p>
+      <strong class="products-label">Price:</strong>
+      <%= number_to_currency @product.price %>
+    </p>
+
+    <p>
+      <strong class="products-label">Quantity:</strong>
+      <%= @product.quantity %>
+    </p>
+
+
+  
+    <hr>
+
+     <p>
+      <strong class="products-label">Description:</strong>
+      <%= @product.description %>
+    </p>
+    <hr>
+
+    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %> 
+    <%= link_to 'Inventory', products_path, class: "btn btn-default" %>
+    
+    <% if can? :create, Product %>
+      <%= link_to 'Add Piece', new_product_path, class: 'btn btn-default' %>
+    <% end %>
+  
+
+  </div>
+  <div class="col col-lg-10 col-md-8 col-sm-8">
+    <p>
+      <%= image_tag @product.image, class: "admin-show-pic"%>
+    </p>
+</div>

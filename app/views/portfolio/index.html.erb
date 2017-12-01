@@ -1,0 +1,62 @@
+<h1 class="portfolio-header text-center">Welcome to My Flowers</h1>
+
+<div class="feature">
+
+	<div id="slideshow" class="sliders" style:"clear:both;">
+		<%= @index %>
+
+	      <% @carousel.each do |carousel| %>
+
+	      <%= image_tag carousel, class: "slide"%>
+
+	      <% end %>
+	</div>
+
+	<div class="row feature-link-section">
+		<!-- Fine Art -->
+			<div class="feature-link-panel panel col col-lg-4 col-md-4 col-sm col-xs">
+
+
+		
+			
+					
+			<%= link_to portfolio_path(category_id: @product1.category_id) do %> 	<%= image_tag @product1.image, class: "feature-link-pic" %>
+			<% end %>
+
+				<div class="feature-link-text">	
+					<h5><%= @product1.category.name %></h5>
+				
+				</div>
+						
+
+
+
+
+			</div>
+			<!-- Portraits -->
+			<div class="feature-link-panel panel col col-lg-4 col-md-4 col-sm col-xs">
+					
+					<%= link_to portfolio_path(category_id: @product2.category_id) do %> 	<%= image_tag @product2.image, class: "feature-link-pic" %>
+						<% end %>
+
+							<div class="feature-link-text">
+								<h5><%= @product2.category.name%></h5>
+							</div>
+				
+				
+			</div>
+			<!-- Store -->
+				<div class="feature-link-panel panel col col-lg-4 col-md-4 col-sm col-xs">
+					<%= link_to portfolio_path(category_id: @product3.category_id) do %> 	<%= image_tag @product3.image, class: "feature-link-pic" %>
+							<% end %>
+
+							<div class="feature-link-text">
+								<h5><%= @product3.category.name %></h5>
+							</div>
+						
+				
+			</div>
+
+	</div>
+
+</div> 
