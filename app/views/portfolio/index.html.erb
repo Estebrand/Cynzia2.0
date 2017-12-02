@@ -19,16 +19,16 @@
 
 		
 			
-					
-			<%= link_to portfolio_path(category_id: @product1.category_id) do %> 	<%= image_tag @product1.image, class: "feature-link-pic" %>
+			<% if @product1 != nil %>	
+			<%= link_to portfolio_path(category: @product1.category) do %> 	<%= image_tag @product1.image, class: "feature-link-pic" %>
 			<% end %>
 
 				<div class="feature-link-text">	
-					<h5><%= @product1.category.name %></h5>
+					<h5><%= @product1.category %></h5>
 				
 				</div>
 						
-
+		<% end %>
 
 
 
@@ -36,24 +36,28 @@
 			<!-- Portraits -->
 			<div class="feature-link-panel panel col col-lg-4 col-md-4 col-sm col-xs">
 					
-					<%= link_to portfolio_path(category_id: @product2.category_id) do %> 	<%= image_tag @product2.image, class: "feature-link-pic" %>
+						<% if @product2 != nil %>	
+
+					<%= link_to portfolio_path(category: @product2.category) do %> 	<%= image_tag @product2.image, class: "feature-link-pic" %>
 						<% end %>
 
 							<div class="feature-link-text">
-								<h5><%= @product2.category.name%></h5>
+								<h5><%= @product2.category%></h5>
 							</div>
-				
+				<% end %>
 				
 			</div>
 			<!-- Store -->
 				<div class="feature-link-panel panel col col-lg-4 col-md-4 col-sm col-xs">
-					<%= link_to portfolio_path(category_id: @product3.category_id) do %> 	<%= image_tag @product3.image, class: "feature-link-pic" %>
+					
+				<% if @product3 != nil %>	
+					<%= link_to portfolio_path(category: @product3.category) do %> 	<%= image_tag @product3.image, class: "feature-link-pic" %>
 							<% end %>
 
 							<div class="feature-link-text">
-								<h5><%= @product3.category.name %></h5>
+								<h5><%= @product3.category %></h5>
 							</div>
-						
+					<% end %>
 				
 			</div>
 

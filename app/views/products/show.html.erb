@@ -10,6 +10,10 @@
       <strong class="products-label">Featured on Home Screen</strong>
 
     <% end %>
+    <p>
+      <strong class="products-label">Format:</strong>
+      <%= @product.image_type%>
+    </p>
 
     <hr>
 <!-- Basic Information -->
@@ -21,13 +25,15 @@
 
     <p>
       <strong class="products-label">Image Type:</strong>
-      <%= @picture.shape %>
+      <%= @product.image_type %>
     </p>
 
     <p>
       <strong class="products-label">Category:</strong>
-      <%= @product.category.name %>
+      <%= @product.category%>
     </p>
+
+  
 
     <p>
       <strong class="products-label">Medium:</strong>

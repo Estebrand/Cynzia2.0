@@ -12,20 +12,19 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @picture = Picture.find(@product.image_type)
+   
+
   end
 
   # GET /products/new
   def new
     @product = Product.new
-    @categories = Category.all  
-    @pictures = Picture.all
+
   end
 
   # GET /products/1/edit
   def edit
-    @categories = Category.all   
-    @pictures = Picture.all
+
   end
 
   # POST /products
@@ -76,12 +75,9 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :price, :quantity, :description, :medium, :year, :size, :category_id, :image, :image_type, :for_sale, :feature_image,)
+      params.require(:product).permit(:name, :price, :quantity, :description, :medium, :year, :size, :category, :image, :image_type, :for_sale, :feature_image,)
     end
 
-    def category_name
-      @category = Categrogy.name
-    end 
 
 
 end

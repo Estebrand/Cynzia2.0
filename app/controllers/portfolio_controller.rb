@@ -1,21 +1,18 @@
 class PortfolioController < ApplicationController
   
 	def portfolio
-		@products = Product.where(category: params[:category_id])
-    @category = Category.find(params[:category_id])
-
-
+		@products = Product.where(category: params[:category])
 	end
 
   def portraits
-  	@products = Product.where(category: params[:category_id])
-    @category = Category.find(params[:category_id])
+  	@products = Product.where(category: params[:category])
+
   end
 
   def index
-  @product1 = Product.find_by(category_id: 6)
-  @product2 = Product.find_by(category_id: 7)
-  @product3 = Product.find_by(category_id: 8)
+  @product1 = Product.find_by(category: "Fine Art")
+  @product2 = Product.find_by(category: "People Portraits")
+  @product3 = Product.find_by(category: "Pet Portraits")
 
 
   @products = Product.all
