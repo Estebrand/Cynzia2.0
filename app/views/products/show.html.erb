@@ -24,16 +24,16 @@
     </p>
 
     <p>
-      <strong class="products-label">Image Type:</strong>
-      <%= @product.image_type %>
-    </p>
-
-    <p>
       <strong class="products-label">Category:</strong>
       <%= @product.category%>
     </p>
 
-  
+    <p>
+      <% if @product.category == "Fine Art" %>
+        <strong class="products-label">Series:</strong>
+        <%= @product.series_name%>
+      <% end %>
+    </p>
 
     <p>
       <strong class="products-label">Medium:</strong>
