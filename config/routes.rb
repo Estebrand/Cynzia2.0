@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+# Series
+  resources :series
+
+  get 'index_series' => 'series#index'
+
 # USERS / ADMIN
   get 'all_users'=> 'admin#all_users'
 
