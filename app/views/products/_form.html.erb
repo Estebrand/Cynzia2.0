@@ -47,19 +47,20 @@
 <!-- Feature or not -->
         <div class="field btn-for-sale" data-toggle="toogle">
           <%= form.label "Feature on Home Screen", class: "products-label" %>
-            <div class=" form-control">
+            <div class=" form-group">
               <%= form.label :feature_image, "Yes", :value => "true" %>
-              <%= form.radio_button :feature_image, true %>
+              <%= form.radio_button :feature_image, true%>
               <%= form.label :feature_image, "No", :value => "false" %>      
               <%= form.radio_button :feature_image, false %>
             </div>
          </div>
 
         <hr>
-         <!-- For Sale Toogle -->
+  <!-- For Sale Toogle -->
         <div class="field btn-for-sale" data-toggle="toogle">
           <%= form.label :for_sale, class: "products-label" %>
-            <div class=" field">
+            <div class=" form-group" >
+      
               <%= form.label :for_sale, "Sale", :value => "true" %>
               <%= form.radio_button :for_sale, true %>
               <%= form.label :for_sale, "No", :value => "false" %>      
@@ -67,7 +68,7 @@
             </div>
          </div>
 <!-- Price -->
-        <div class="field">
+        <div class="form-group">
           <%= form.label :price, class: "products-label" %>
           <%= form.text_field :price, id: :product_price, class: "products-field form-control" %>
         </div>
@@ -92,18 +93,18 @@
           <%= form.label :medium, class: "products-label" %>
           <%= form.text_field :medium, id: :product_medium, class: "products-field form-control" %>
         </div>
-
+<!-- Year -->
         <div class="field">
           <%= form.label :year, class: "products-label" %>
-          <%= form.number_field :year, id: :product_year, class: "products-field form-control" %>
+          <%= form.number_field :year, id: :product_year, in: 1960...2070, class: "products-field form-control" %>
         </div>
-
+<!-- Size -->
          <div class="field">
-          <%= form.label :size, class: "products-label" %>
+          <%= form.label :size, class: "products-label" %> 
           <%= form.text_field :size, id: :product_size, class: "products-field form-control" %>
         </div>
 
-
+<!-- description -->
 
         <div class="field">
           <%= form.label :description, class: "products-label" %>

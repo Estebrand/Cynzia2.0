@@ -40,7 +40,10 @@
         <td><%= product.year %></td>
         <td><%= product.size %></td>
         <td><%= product.description %></td>
-        <td><%= product.for_sale %></td>
+          <% if product.for_sale = true %>
+           <td><p  class="glyphicon glyphicon-ok "></p></td>
+          <% end %>
+        
         <td><%= number_to_currency product.price %></td>
         <td><%= product.quantity %></td>
         <td><%= link_to 'Show', product, class: "btn btn-default"  %></td>
