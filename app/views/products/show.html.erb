@@ -29,7 +29,7 @@
     </p>
 
     <p>
-      <% if @product.category == "Fine Art" %>
+      <% if @product.category == "Fine Art" && @product.series_name != nil%>
         <strong class="products-label">Series:</strong>
         <%= @product.series_name%>
       <% end %>

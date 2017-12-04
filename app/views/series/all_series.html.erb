@@ -5,10 +5,13 @@
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="panel center-it">
 				
-			
-				<%= image_tag s.image, class: "storefront-pic" %>
-				<h3  class="storefront-text"><%= s.name %></h3>
+			<%= link_to series_fineart_path(s.name) do %>
+				<%= image_tag s.image , class: "storefront-pic" %>
+			<% end %>
+
+				<h3 class="storefront-text"><%= s.name %></h3>
 				<p class="storefront-text"><%= s.description %></p> 
+		
 			
 
 			</div>

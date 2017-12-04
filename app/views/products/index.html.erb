@@ -34,8 +34,16 @@
         <% else %>
           <td ></td>
         <% end %>
-        <td><%= product.name %></td>
-        <td><%= product.category %></td>
+        <td><%= product.name %> </td>
+        <td><%= product.category %>
+             
+          <% if product.category == "Fine Art" && product.series_name != nil%>
+          
+           <p><strong class="red">Series:</strong>
+            <%= product.series_name %></p>
+          <% end %>
+
+        </td>
         <td><%= product.medium %></td>
         <td><%= product.year %></td>
         <td><%= product.size %></td>

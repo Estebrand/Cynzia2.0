@@ -1,0 +1,10 @@
+
+ <h2><%= @series.name %></h2>
+
+<% @products.each do |p| %>
+
+	<div class="panel">
+		<%= image_tag p.image, class: "thumb" %>
+		<%= p.name%>
+	</div>
+<% end %>

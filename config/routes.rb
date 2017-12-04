@@ -68,6 +68,8 @@ Rails.application.routes.draw do
 
   get 'series_all' => 'series#all_series'
 
+  get 'series_fineart' => 'series#fineart_series'
+
   devise_for :users
   resources :products
 

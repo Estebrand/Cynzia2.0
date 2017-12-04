@@ -27,6 +27,11 @@ class SeriesController < ApplicationController
     @products = Product.all
   end
 
+  def fineart_series
+    @products = Product.where(series_name: params[:series_name])
+    @series = Series.all
+  end
+
   # POST /series
   # POST /series.json
   def create

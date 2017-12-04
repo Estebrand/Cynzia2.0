@@ -36,7 +36,7 @@
 			<!-- Portraits -->
 			<div class="feature-link-panel panel col col-lg-4 col-md-4 col-sm col-xs">
 					
-						<% if @product2 != nil %>	
+				<% if @product2 != nil %>	
 
 					<%= link_to portfolio_path(category: @product2.category) do %> 	<%= image_tag @product2.image, class: "feature-link-pic" %>
 						<% end %>

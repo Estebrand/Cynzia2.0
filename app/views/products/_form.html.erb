@@ -40,12 +40,16 @@
           <%= form.select :category, ['Fine Art', 'People Portraits', 'Pet Portraits', 'Previous Work'], {include_blank: "Please select a category"}, class: "form-control" %>
 
         </div>
+
+<!-- Select a Series -->
+  <% if @product.category == "Fine Art"%>
         <div class="form-group" >
+        
         <p class="products-label">Select a Series </p>
         <%= form.select :series_name, @series.collect {|s| [s.name, s.name]}, {include_blank: "Please select a series"}, class: "form-control" %>
-
-          
+    
         </div>
+    <% end %>
 
     </div>
     <div class="col col-lg-4 col-md-6 col-sm-6">
