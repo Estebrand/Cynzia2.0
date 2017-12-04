@@ -64,7 +64,9 @@ Rails.application.routes.draw do
 
   get 'pets'=> 'portfolio#portrait_pets'
 
-  get 'fine_art' => 'portfolio/#ine_art'
+  get 'fineart' => 'portfolio#portfolio'
+
+  get 'series_all' => 'series#all_series'
 
   devise_for :users
   resources :products

@@ -30,7 +30,7 @@
         <td><%= image_tag product.image.url, class: "thumb" %></td>
 
         <% if product.feature_image == true %>
-          <td><p  class="glyphicon glyphicon-ok "></p></td>
+          <td><p  class="glyphicon glyphicon-ok red"></p></td>
         <% else %>
           <td ></td>
         <% end %>
@@ -41,7 +41,7 @@
         <td><%= product.size %></td>
         <td><%= product.description %></td>
           <% if product.for_sale = true %>
-           <td><p  class="glyphicon glyphicon-ok "></p></td>
+           <td><p  class="glyphicon glyphicon-ok red "></p></td>
           <% end %>
         
         <td><%= number_to_currency product.price %></td>

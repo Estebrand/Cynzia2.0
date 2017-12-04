@@ -22,6 +22,11 @@ class SeriesController < ApplicationController
   def edit
   end
 
+  def all_series
+    @series = Series.all
+    @products = Product.all
+  end
+
   # POST /series
   # POST /series.json
   def create
@@ -70,6 +75,6 @@ class SeriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def series_params
-      params.require(:series).permit(:name, :year, :description, :total_qty)
+      params.require(:series).permit(:name, :year, :description, :total_qty, :image)
     end
 end
