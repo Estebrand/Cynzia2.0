@@ -28,8 +28,9 @@ class SeriesController < ApplicationController
   end
 
   def fineart_series
+   
+    @series = Series.where(name: params[:name])
     @products = Product.where(series_name: params[:series_name])
-    @series = Series.all
   end
 
   # POST /series

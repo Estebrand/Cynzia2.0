@@ -97,6 +97,15 @@
 
 .storefront-title{
 	margin-left:5%;
+	color: #666;
+	font-weight: 200;
+	font-size: 40px;
+}
+
+.portfolio-title{
+	color: #666;
+	font-weight: 200;
+	font-size: 40px;
 }
 
 .sold{
@@ -146,10 +155,6 @@
 .feature-link-text{
 	text-align: center;
 }
-.feature-link-panel{
-
-
-}
 
 /*END FEATURE */
 
@@ -173,13 +178,6 @@
 /* End Products*/
 /* Portfolio / Home */
 
-.portfolio-header{
-	color: rgba(128,0,0,0.75);	
-}
-
-
-
-
 .right-side{
 
 	margin-left:75%;
@@ -194,4 +192,36 @@ li, th, td{
 .admin-show-pic{
 	width:100%;
 	border-radius: 3px;
+}
+
+/* Masonary Columns */
+
+.masonary-row.row {
+	-webkit-column-gap: 30px; 
+	-moz-column-gap: 30px;
+	column-gap: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	word-wrap: break-word;
+}
+.masonary-row [class*="col-"] {
+	 display: inline-block;
+	 width: 100%;
+	 height: 100%;
+	 float: none;
+	 padding: 0px;
+}
+@media (min-width: 480px) {
+	.masonary-row.row {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+}
+@media (min-width: 768px) {
+	.masonary-row.row {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
 }
