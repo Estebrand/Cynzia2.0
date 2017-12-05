@@ -30,7 +30,8 @@ class SeriesController < ApplicationController
   def fineart_series
    
     @series = Series.where(name: params[:name])
-    @products = Product.where(series_name: params[:series_name])
+    # @products = Product.where(series_name: @series)
+     @products = series.products.where(name: @series)
   end
 
   # POST /series

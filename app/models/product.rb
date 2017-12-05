@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
 	mount_uploader :image, ImageUploader
 	
-	has_one :series
+	belongs_to :series
 
 end
