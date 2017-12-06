@@ -60,9 +60,11 @@ Rails.application.routes.draw do
 
   get 'previous_work' => 'portfolio#previous_work'
 
-  get 'portfolio'=> 'portfolio#portfolio'
+  get 'fine_art'=> 'portfolio#fineart'
 
-  get 'pets'=> 'portfolio#portrait_pets'
+  get 'pets'=> 'portfolio#pet'
+
+  get 'people'=> 'portfolio#people'
 
   get 'fineart' => 'portfolio#portfolio'
 
