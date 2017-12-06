@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+
+
+ <div class="col col-lg-2 col-mid-4 col-sm-4">
+    <p>
+      <strong class="red">Series Name:</strong>
+      <%= @group.name %>
+    </p>
+
+    <p>
+      <strong class="red">Year:</strong>
+      <%= @group.year %>
+    </p>
+
+    <p>
+      <strong class="red">Description:</strong>
+      <%= @group.description %>
+    </p>
+
+    <p>
+      <strong class="red">Total qty:</strong>
+      <%= @group.total_qty %>
+    </p>
+
+    <%= link_to 'Edit', edit_series_path(@group), class: "btn btn-default" %> 
+    <%= link_to 'All Series', groups_index_path, class: "btn btn-default" %>
+    <%= link_to 'New Series', new_group_path, class: "btn btn-default" %>
+
+
+
+  </div>
+  <div class="col col-lg-10 col-md-8 col-sm-8">
+ <p>
+  <%= image_tag @group.image, class: "admin-show-pic"%>
+</p>
+</div>

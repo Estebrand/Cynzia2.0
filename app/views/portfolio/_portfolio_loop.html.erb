@@ -37,6 +37,10 @@
 			      	<% end %>
 
 			      		<h3 class="storefront-text">Title: <%= link_to product.name, product %></h3>
+			      		<% if product.series_name != nil  %>
+									<p class="storefront-text">Series: <%=  product.series_name %></p>			
+								<% end %>      		
+
 			      		<p class="storefront-text">Year: <%=  product.year %></p>
 			      		<p class="storefront-text">Medium: <%= product.medium %></p>
 			      		<p class="storefront-text">Size: <%= product.size %></p>

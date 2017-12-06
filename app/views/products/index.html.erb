@@ -48,9 +48,11 @@
         <td><%= product.year %></td>
         <td><%= product.size %></td>
         <td><%= product.description %></td>
-          <% if product.for_sale = true %>
+        <% if product.for_sale == true %>
            <td><p  class="glyphicon glyphicon-ok red "></p></td>
-          <% end %>
+        <% else %>
+        <td></td>
+        <% end %>
         
         <td><%= number_to_currency product.price %></td>
         <td><%= product.quantity %></td>

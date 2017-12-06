@@ -37,9 +37,11 @@
 
         <div class="form-group">
           <%= form.label :category, class: "products-label" %>
-          <%= form.select :category, ['Fine Art', 'People Portraits', 'Pet Portraits', 'Previous Work'], {include_blank: "Please select a category"}, class: "form-control" %>
+          <%= form.select :category, ['Fine Art', 'People Portraits', 'Pet Portraits'], {include_blank: "Please select a category"}, class: "form-control" %>
 
         </div>
+
+
 
 <!-- Select a Series -->
   <% if @product.category == "Fine Art"%>
@@ -62,6 +64,19 @@
               <%= form.radio_button :feature_image, true%>
               <%= form.label :feature_image, "No", :value => "false" %>      
               <%= form.radio_button :feature_image, false %>
+            </div>
+         </div>
+
+
+<!-- Feature or not -->
+        <div class="field btn-for-sale" data-toggle="toogle">
+          <%= form.label "Previous Work", class: "products-label" %>
+          <p><i>Only apply if you do not want in your portfolio.</i></p>
+            <div class=" form-group">
+              <%= form.label :previous_work, "Yes", :value => "true" %>
+              <%= form.radio_button :previous_work, true %>
+              <%= form.label :previous_work, "No", :value => "false" %>      
+              <%= form.radio_button :previous_work, false %>
             </div>
          </div>
 

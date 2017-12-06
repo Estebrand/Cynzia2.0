@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :groups
 # Series
   resources :series
 
-  get 'index_series' => 'series#index'
+ 
 
 # USERS / ADMIN
   get 'all_users'=> 'admin#all_users'
@@ -66,9 +67,13 @@ Rails.application.routes.draw do
 
   get 'fineart' => 'portfolio#portfolio'
 
-  get 'series_all' => 'series#all_series'
+# Series / Groups
 
-  get 'series_fineart' => 'series#fineart_series'
+  get 'groups_all' => 'groups#all_groups'
+
+  get 'groups_fineart' => 'groups#fineart_groups'
+
+   get 'groups_index' => 'groups#index'
 
   devise_for :users
   resources :products

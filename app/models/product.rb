@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
 	mount_uploader :image, ImageUploader
 	
-	belongs_to :series
+	belongs_to :group, optional: true
 
 end

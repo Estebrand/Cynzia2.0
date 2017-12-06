@@ -36,6 +36,14 @@
     </p>
 
     <p>
+    <% if @product.previous_work == true %>
+
+      <strong class="products-label">Previous Work: </strong> True
+
+    <% end %>
+    </p>
+    
+    <p>
       <strong class="products-label">Medium:</strong>
       <%= @product.medium %>
     </p>

@@ -1,0 +1,44 @@
+
+
+<%= form_with(model: group, local: true) do |form| %>
+  <% if group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this series from being saved:</h2>
+
+      <ul>
+      <% group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="field">
+    <%= form.label :image, class: "products-label" %>
+    <%= form.file_field :image, id: :image, class: "products-pic" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name, class: "products-label"  %>
+    <%= form.text_field :name, id: :series_name, class: "btn btn-default form-control" %>
+  </div>
+<!-- year  -->
+  <div class="field">
+    <%= form.label :year, class: "products-label"  %>
+    <%= form.number_field :year, id: :series_year, in: 1960...2070, class: "btn btn-default form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description, class: "products-label"  %>
+    <%= form.text_field :description, id: :series_description, class: "btn btn-default form-control" %>
+  </div>
+
+ <br />
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-warning" %>
+
+
+  <%= link_to 'All Series', groups_index_path, class: "btn btn-default"  %>
+   </div>
+<% end %>
