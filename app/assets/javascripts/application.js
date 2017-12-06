@@ -20,7 +20,7 @@
 //= require_tree .
 
 
-  $(document).ready(function () {
+  window.addEventListener("load",function () {
     $("#slideshow").sliders({
         interval: 2000
       });
