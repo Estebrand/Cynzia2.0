@@ -59,7 +59,7 @@ Rails.application.routes.draw do
 
   get 'index' => 'portfolio#index'
 
-  get 'portraits' => 'portfolio#portraits'
+  get 'previous_work' => 'portfolio#previous_work'
 
   get 'portfolio'=> 'portfolio#portfolio'
 

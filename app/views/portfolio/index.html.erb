@@ -51,7 +51,7 @@
 				<div class="feature-link-panel panel col col-lg-4 col-md-4 col-sm col-xs">
 					
 				<% if @product3 != nil %>	
-					<%= link_to portfolio_path(category: @product3.category) do %> 	<%= image_tag @product3.image, class: "feature-link-pic" %>
+					<%= link_to portfolio_path(category: @product3.category, previous_work: @product3.previous_work) do %> 	<%= image_tag @product3.image, class: "feature-link-pic" %>
 							<% end %>
 
 							<div class="feature-link-text">

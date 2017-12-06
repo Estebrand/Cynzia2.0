@@ -1,11 +1,11 @@
 class PortfolioController < ApplicationController
   
 	def portfolio
-		@products = Product.where(category: params[:category])
+		@products = Product.where(category: params[:category], previous_work: false)
 	end
 
-  def portraits
-  	@products = Product.where(category: params[:category])
+  def previous_work
+  	@products = Product.where(previous_work: true)
 
   end
 
