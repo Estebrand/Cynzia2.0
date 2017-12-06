@@ -29,6 +29,7 @@ class GroupsController < ApplicationController
 
   def fineart_groups
     @products = Product.where(series_name: params[:name])
+    @product = @products.first
 
     @carousel = []
      
