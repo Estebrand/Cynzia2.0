@@ -28,9 +28,15 @@ class GroupsController < ApplicationController
   
 
   def fineart_groups
-    @groups = Group.where(name: params[:name])
-    # @products = Product.where(series_name: @series)
-     @products = groups.products.where(name: @series)
+    @products = Product.where(series_name: params[:name])
+
+    @carousel = []
+     
+     @products.each do |product|
+
+        @carousel.push(product.image)
+   
+    end
     
   end
 

@@ -27,7 +27,7 @@
           <td><%= series.description %></td>
           <td><%= series.total_qty %></td>
           <td><%= link_to 'Show', series, class: "btn btn-default" %></td>
-          <td><%= link_to 'Edit', edit_series_path(series), class: "btn btn-default" %></td>
+          <td><%= link_to 'Edit', edit_group_path(series), class: "btn btn-default" %></td>
           <td><%= link_to 'Destroy', series, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
         </tr>
       <% end %>

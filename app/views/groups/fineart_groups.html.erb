@@ -1,5 +1,18 @@
 
-<h3><%= @sereies %></h3>
+<h3 class="storefront-title">Series "<%=  %>"</h3>
+
+	<div id="slideshow" class="sliders center-it" style:"clear:both;">
+		<%= @products %>
+
+	      <% @carousel.each do |carousel| %>
+
+	      <%= image_tag carousel, class: "slide"%>
+
+	      <% end %>
+	</div>
+
+
+
 
 
 <div class ="masonary-row row">
@@ -8,9 +21,11 @@
 		<div class="col-xs-12 col-sm-6 col-lg-6">
 				<div class="panel center-it">
 
+					<% if p.image.url.nil? == false %>
+						<%= image_tag p.image, class: "storefront-pic" %>
+					<% end %>
 
-					<%= image_tag p.image, class: "thumb" %>
-					<%= p.name %>
+					<h3  class="storefront-text"><%= p.name %></h3>
 				</div>
 
 

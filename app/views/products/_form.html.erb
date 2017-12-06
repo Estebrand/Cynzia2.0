@@ -48,7 +48,7 @@
         <div class="form-group" >
         
         <p class="products-label">Select a Series </p>
-        <%= form.select :series_name, @series.collect {|s| [s.name, s.name]}, {include_blank: "Please select a series"}, class: "form-control" %>
+        <%= form.select :series_name, @group.collect {|s| [s.name, s.name]}, {include_blank: "Please select a series"}, class: "form-control" %>
     
         </div>
     <% end %>

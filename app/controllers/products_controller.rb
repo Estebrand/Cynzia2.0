@@ -19,13 +19,13 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-    @series = Series.all
+    @group = Group.all
 
   end
 
   # GET /products/1/edit
   def edit
-    @series = Series.all
+    @group = Group.all
 
   end
 

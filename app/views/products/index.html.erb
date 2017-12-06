@@ -39,14 +39,15 @@
   <!-- Category / Previous Work -->
         <td>
           <% if product.previous_work == true %>
-              <p class="red">Previous Work</p>
+              <p>Previous Work</p>
           <% else %>
               <%= product.category %>
                  
-              <% if product.category == "Fine Art" && product.series_name != nil%>
+              <% if  product.series_name != nil %>
               
-               <p><strong class="red">Series:</strong>
+                <p><strong class="red">Series:</strong>
                 <%= product.series_name %></p>
+
               <% end %>
           <% end %>
         </td>
