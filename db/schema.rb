@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206181254) do
+ActiveRecord::Schema.define(version: 20171206190642) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
@@ -59,16 +59,6 @@ ActiveRecord::Schema.define(version: 20171206181254) do
     t.boolean "feature_image"
     t.string "series_name"
     t.boolean "previous_work"
-  end
-
-  create_table "series", force: :cascade do |t|
-    t.string "name"
-    t.integer "year"
-    t.string "description"
-    t.string "total_qty"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "image"
   end
 
   create_table "users", force: :cascade do |t|
