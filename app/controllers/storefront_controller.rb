@@ -1,4 +1,6 @@
 class StorefrontController < ApplicationController
+ include Transloadit::Rails::ParamsDecoder
+
  
   def all_items
   	@products = Product.where(:for_sale => true)

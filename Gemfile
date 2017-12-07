@@ -20,17 +20,20 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
+gem "jquery-sliders-rails"
+
 gem 'rails-bootstrap-toggle-buttons'
 gem 'devise'
 gem 'cancan'
 gem 'better_errors', group: :development
 gem 'carrierwave'
 gem 'binding_of_caller'
+gem 'transloadit-rails'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'figaro'
 # Carousel
-gem "jquery-sliders-rails"
+
 # gem 'therubyracer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views

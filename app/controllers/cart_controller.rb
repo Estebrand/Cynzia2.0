@@ -1,5 +1,5 @@
 class CartController < ApplicationController
-
+  include Transloadit::Rails::ParamsDecoder
 
   before_action :authenticate_user!, expcept: [:add_to_cart, :view_order]
 

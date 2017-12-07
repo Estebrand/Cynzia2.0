@@ -11,7 +11,9 @@
 
 				<h3 class="storefront-text"><%= s.name %></h3>
 				<p class="storefront-text"><%= s.description %></p> 
-		
+				<%= link_to "See More", groups_fineart_path(name: s.name), class: "btn btn-default storefront-text" %>
+				<p></p>
+
 			</div>
 		</div>
 	<% end %>

@@ -1,8 +1,12 @@
 class PortfolioController < ApplicationController
+  include Transloadit::Rails::ParamsDecoder
+
   
 	def portfolio
 		@products = Product.where(category: params[:category], previous_work: false)
     @product = @products.first
+
+
 	end
 
   def previous_work

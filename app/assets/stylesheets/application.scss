@@ -84,7 +84,7 @@
 /* STOREFRONT */
 .storefront-pic{
 	width:90%;
-	height: 100%;
+	height: inherit;
 	margin: 0 auto;
 	display: block;
 	border-radius: 5px;
@@ -97,7 +97,14 @@
 }
 
 .storefront-title{
-	margin-left:5%;
+	margin-left:3%;
+	color: #666;
+	font-weight: 200;
+	font-size: 40px;
+}
+
+.storefront-title-modal{
+	margin-left:8%;
 	color: #666;
 	font-weight: 200;
 	font-size: 40px;
@@ -161,8 +168,11 @@
 /*END FEATURE */
 
 /* PRODUCTS EDIT */
-.products-field{
-	width:300px;
+
+.products-field-dems{
+	width: 20%;
+
+	
 }
 
 .products-label{
@@ -174,6 +184,8 @@
 	width:350px;
 	height: 100%;
 }
+
+
 .glyphicon-ok{
 	color:rgba(128,0,0,0.75);
 }

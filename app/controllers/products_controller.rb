@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  include Transloadit::Rails::ParamsDecoder
+
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   
   before_action :authenticate_user!, except: [:show]
@@ -77,7 +79,7 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :price, :quantity, :description, :medium, :year, :size, :category, :image, :image_type, :for_sale, :feature_image, :series_name, :previous_work)
+      params.require(:product).permit(:name, :price, :quantity, :description, :medium, :year, :size, :category, :image, :image_type, :for_sale, :feature_image, :series_name, :previous_work, :width, :height, :depth)
     end
 
 

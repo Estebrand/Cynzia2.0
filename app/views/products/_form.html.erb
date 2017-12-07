@@ -10,21 +10,37 @@
       </ul>
     </div>
   <% end %>
- 
-    <div class="row">
-    <div class="col col-lg-4 col-md-6 col-sm-6">
+  
+  <br />
+  
+  <div class="row">
+  <div class="col col-lg-5 col-md-12 col-sm-12">
 <!-- Image -->
   <div class="field">
-    <p class="products-label">Image</p>
+    
     <% if product.image.url != nil %>
     <%= image_tag product.image.url, class: "products-pic" %>
     <% end %>
   </div>
     <!-- Upload Image -->
+
+
         <div class="form-group">
           <strong class="products-label">Upload an Image</strong>
-          <%= form.file_field :image, class: "btn btn-default form-control" %>
+          <%= form.file_field :image, id: :image, class: "btn btn-default form-control"   %>
+    
+
+
         </div>
+
+       
+<!-- Image Name -->
+        <div class="field">
+          <%= form.label :name, class: "products-label" %>
+          <%= form.text_field :name, id: :product_name, class: "form-control" %>
+        </div>
+
+
 <!--  Image Type -->
 
         <div class="form-group">
@@ -44,89 +60,117 @@
 
 
 <!-- Select a Series -->
-  <% if @product.category == "Fine Art"%>
+
         <div class="form-group" >
         
         <p class="products-label">Select a Series </p>
         <%= form.select :series_name, @group.collect {|s| [s.name, s.name]}, {include_blank: "Please select a series"}, class: "form-control" %>
     
         </div>
-    <% end %>
+<!-- Year -->
+    <div class="field">
+      <%= form.label :year, class: "products-label" %>
+      <%= form.number_field :year, id: :product_year, in: 1960...2070, class: "form-control" %>
+    </div>
 
     </div>
-    <div class="col col-lg-4 col-md-6 col-sm-6">
+    <div class="col col-lg-3 col-md-12 col-sm-12">
+
+
+
 
 <!-- Feature or not -->
+      <div class="row">
+        <div class="col col-sm-4 col-lg-12">
+
         <div class="field btn-for-sale" data-toggle="toogle">
           <%= form.label "Feature on Home Screen", class: "products-label" %>
             <div class=" form-group">
               <%= form.label :feature_image, "Yes", :value => "true" %>
               <%= form.radio_button :feature_image, true%>
+             
+              <p></p>
+
               <%= form.label :feature_image, "No", :value => "false" %>      
               <%= form.radio_button :feature_image, false %>
             </div>
          </div>
 
-
+       </div>
+        <div class="col col-sm-4 col-lg-12">
 <!-- Feature or not -->
-        <div class="field btn-for-sale" data-toggle="toogle">
-          <%= form.label "Previous Work", class: "products-label" %>
-          <p><i>Only apply if you do not want in your portfolio.</i></p>
-            <div class=" form-group">
-              <%= form.label :previous_work, "Yes", :value => "true" %>
+          <div class="field btn-for-sale" data-toggle="toogle">
+            <%= form.label "Previous Work", class: "products-label" %>
+            <p><i>Will not be featured in Portfolio</i></p>
+              <div class=" form-group">
+              <%= form.label :previous_work, "Yes", :value => "true"  %>
               <%= form.radio_button :previous_work, true%>
+
+              <p></p>
+
               <%= form.label :previous_work, "No", :value => "false" %>      
               <%= form.radio_button :previous_work, false %>
             </div>
          </div>
+      </div>
+      <div class="col col-sm-4  col-lg-12">
 
-        <hr>
   <!-- For Sale Toogle -->
         <div class="field btn-for-sale" data-toggle="toogle">
           <%= form.label :for_sale, class: "products-label" %>
             <div class=" form-group" >
-      
+    
               <%= form.label :for_sale, "Sale", :value => "true" %>
               <%= form.radio_button :for_sale, true %>
-              <%= form.label :for_sale, "No", :value => "false" %>      
+             
+              <p></p>
+
+              <%= form.label :for_sale, "No", :value => "false" %>  
               <%= form.radio_button :for_sale, false %>
             </div>
-         </div>
+           </div>
+        </div>
+       </div>
+
+    </div>
+    <div class="col col-lg-4 col-md-12 col-sm-12">
 <!-- Price -->
         <div class="form-group">
           <%= form.label :price, class: "products-label" %>
-          <%= form.text_field :price, id: :product_price, class: "products-field form-control" %>
+          <%= form.text_field :price, id: :product_price, class: " form-control" %>
         </div>
 <!-- QTY -->
         <div class="field">
           <%= form.label :quantity, class: "products-label" %>
-          <%= form.number_field :quantity, id: :product_quantity, class: "products-field form-control" %>
+          <%= form.number_field :quantity, id: :product_quantity, class: "form-control" %>
         </div>
 
        <hr>
-      </div>
+ 
 
-    <div class="col col-lg-4 col-md-6 col-sm-6">
-       
-<!-- Image Name -->
-        <div class="field">
-          <%= form.label :name, class: "products-label" %>
-          <%= form.text_field :name, id: :product_name, class: "products-field form-control" %>
-        </div>
+
+
 <!-- Medium -->
          <div class="field">
           <%= form.label :medium, class: "products-label" %>
-          <%= form.text_field :medium, id: :product_medium, class: "products-field form-control" %>
+          <%= form.text_field :medium, id: :product_medium, class: "form-control" %>
         </div>
-<!-- Year -->
-        <div class="field">
-          <%= form.label :year, class: "products-label" %>
-          <%= form.number_field :year, id: :product_year, in: 1960...2070, class: "products-field form-control" %>
-        </div>
+
 <!-- Size -->
+         <br />
          <div class="field">
-          <%= form.label :size, class: "products-label" %> 
-          <%= form.text_field :size, id: :product_size, class: "products-field form-control" %>
+         
+          <p>
+          <%= form.label :width, class: "products-label" %>
+          <%= form.text_field :width, id: :width, class: "products-field-dems" %>
+
+          <%= form.label :height, class: "products-label" %>
+          <%= form.text_field :height, id: :height, class: "products-field-dems" %>
+        
+           <%= form.label :depth, class: "products-label" %> 
+           <%= form.text_field :depth, id: :depth, class: "products-field-dems " %>
+         </p>
+
         </div>
 
 <!-- description -->
@@ -139,11 +183,15 @@
         <br />
 
         <div class="actions">
+
+          
+          <%= link_to 'All Pieces', products_path, class: "btn btn-default" %>
           <%= form.submit class: "btn btn-warning" %>
-          <%= link_to 'Show', @product, class: "btn btn-default" %> 
-          <%= link_to 'Inventory', products_path, class: "btn btn-default" %>
 
         </div>
+
+        <br />
+        <br />
 
       </div>
     </div>

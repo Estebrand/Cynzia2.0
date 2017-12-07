@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  include Transloadit::Rails::ParamsDecoder
+
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
